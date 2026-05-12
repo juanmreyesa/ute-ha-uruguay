@@ -35,14 +35,14 @@ Compatible con el [Energy Dashboard](https://www.home-assistant.io/docs/energy/)
 
 ### HACS (recomendado)
 
-[![Abrir Home Assistant y agregar este repositorio a HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=martinmanzo&repository=ute-ha-uruguay&category=integration)
+[![Abrir Home Assistant y agregar este repositorio a HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=juanmreyesa&repository=ute-ha-uruguay&category=integration)
 
 1. Click en el botón de arriba para agregar el repositorio a HACS.
 2. Buscá "UTE Uruguay" en HACS → Install.
 3. Reiniciá HA.
 4. Settings → Devices & Services → Add Integration → "UTE Uruguay" → ingresá tu documento (CI/RUT/BPS) y la contraseña que usás en la app móvil de UTE.
 
-También podés agregarlo manualmente desde HACS → ⋮ → Custom repositories → `https://github.com/martinmanzo/ute-ha-uruguay` (Type: Integration).
+También podés agregarlo manualmente desde HACS → ⋮ → Custom repositories → `https://github.com/juanmreyesa/ute-ha-uruguay` (Type: Integration).
 
 ### Manual
 Copiá `custom_components/ute_energy/` a `<config>/custom_components/ute_energy/` y reiniciá HA.
