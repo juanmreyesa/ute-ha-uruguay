@@ -40,14 +40,13 @@ Compatible con el [Energy Dashboard](https://www.home-assistant.io/docs/energy/)
 4. Settings → Devices & Services → Add Integration → "UTE Uruguay" → ingresá tu documento (CI/RUT/BPS) y la contraseña que usás en la app móvil de UTE.
 
 ### Manual
-Copiá `ha-integration/custom_components/ute_energy/` a `<config>/custom_components/ute_energy/` y reiniciá HA.
+Copiá `custom_components/ute_energy/` a `<config>/custom_components/ute_energy/` y reiniciá HA.
 
 ## Estructura del repo
 
 ```
 ute-ha-uruguay/
-├── ha-integration/
-│   └── custom_components/ute_energy/   # custom component HA (instalable)
+├── custom_components/ute_energy/       # custom component HA (instalable por HACS)
 ├── client-py/                          # cliente Python standalone (PyPI-ready)
 │   ├── ute_client/                     #   async, httpx
 │   └── demo.py                         #   CLI demo (getpass, env UTE_PASSWORD)
@@ -58,7 +57,7 @@ ute-ha-uruguay/
 │   ├── PROTOCOL.md                     # spec del API privado (resp/req shapes)
 │   └── CAPTURE.md                      # cómo reproducir la captura mitm con AVD
 ├── tooling/                            # scripts de RE / mitmproxy
-└── scripts/sync-vendor.sh              # mantener client-py y ha-integration en sync
+└── scripts/sync-vendor.sh              # mantener client-py y custom_components en sync
 ```
 
 ## Cliente standalone (Python)

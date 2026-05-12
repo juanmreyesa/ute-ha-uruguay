@@ -58,7 +58,7 @@ client-ts/dist/
 client-ts/package-lock.json
 *.png
 # Pero los brand icons del custom_component SÍ se trackean
-!ha-integration/custom_components/ute_energy/brand/*.png
+!custom_components/ute_energy/brand/*.png
 client-py/probe*.py
 captures/apk/*/splits/
 
