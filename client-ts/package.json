@@ -1,0 +1,26 @@
+{
+  "name": "@caudata/ute-client",
+  "version": "0.1.0",
+  "description": "Cliente TS de la API privada de la app móvil UTE (Uruguay) — para reuso en volt.uy y otros proyectos web/Node.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsc",
+    "demo": "tsx demo.ts"
+  },
+  "engines": { "node": ">=20" },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "@types/node": "^22.10.0"
+  }
+}

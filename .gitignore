@@ -1,0 +1,68 @@
+# captures con tokens / OTPs reales
+captures/flows/*.mitm
+captures/flows/*.har
+captures/flows/*.json
+!captures/flows/.gitkeep
+
+# APKs (legales pero pesados; los podemos versionar manual si hace falta)
+captures/apk/**/*.apk
+
+# tooling local
+tooling/mitm-ca/
+tooling/apk-patched/
+
+# python venvs
+client-py/.venv/
+ha-integration/.venv/
+
+# node
+client-ts/node_modules/
+client-ts/dist/
+
+# misc
+__pycache__/
+*.pyc
+.DS_Store
+.idea/
+.vscode/
+
+# Tooling clones / venvs / binarios externos (regenerables)
+tooling/blutter/
+tooling/blutter-venv/
+tooling/bin/jadx/
+tooling/bin/bundletool.jar
+tooling/mitm.log
+
+# Outputs de RE regenerables desde los APKs
+captures/jadx-out/
+captures/blutter-out/
+captures/apk/*/arm64_extract/
+captures/apk/*/decoded/
+captures/apk/*/patched/
+captures/apk/*/*.apks
+
+# Android SDK / AVDs (regenerable, multi-GB)
+tooling/android-sdk/
+
+# apk-mitm idsig files
+captures/apk/*/release/
+captures/apk/*/*.idsig
+
+# Python venv del cliente
+client-py/.venv/
+client-py/*.egg-info/
+
+# Node
+client-ts/node_modules/
+client-ts/dist/
+client-ts/package-lock.json
+*.png
+# Pero los brand icons del custom_component SÍ se trackean
+!ha-integration/custom_components/ute_energy/brand/*.png
+client-py/probe*.py
+captures/apk/*/splits/
+
+# Apktool logs y zips temporales
+captures/apk/*/logs/
+captures/apk/*/*.apks
+captures/apk/*/*.apk
