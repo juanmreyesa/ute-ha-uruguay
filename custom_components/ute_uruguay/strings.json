@@ -1,0 +1,59 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "UTE Uruguay",
+        "description": "Ingresá tu documento (CI, RUT, BPS) y la contraseña que usás en la app móvil de UTE.",
+        "data": {
+          "document": "Documento (CI / RUT / BPS)",
+          "password": "Contraseña"
+        }
+      },
+      "reauth_confirm": {
+        "title": "UTE Uruguay — reautenticar",
+        "description": "La sesión de UTE para el documento {document} expiró o fue invalidada (por ejemplo, si iniciaste sesión desde otro lado con la misma cédula). Ingresá tu contraseña para reconectar.",
+        "data": {
+          "password": "Contraseña"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Documento o contraseña incorrectos.",
+      "cannot_connect": "No se pudo conectar con UTE."
+    },
+    "abort": {
+      "already_configured": "Esta cuenta ya está configurada.",
+      "reauth_successful": "Sesión renovada exitosamente."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "consumption_punta": { "name": "Consumo punta (mes)" },
+      "consumption_f_punta": { "name": "Consumo fuera de punta (mes)" },
+      "consumption_llano": { "name": "Consumo llano (mes)" },
+      "consumption_valle": { "name": "Consumo valle (mes)" },
+      "consumption_trs": { "name": "Consumo (mes)" },
+      "consumption_total": { "name": "Consumo total (mes)" },
+      "total_debt": { "name": "Deuda total" },
+      "supply_status": { "name": "Estado del suministro" },
+      "peak_window": { "name": "Horario pico" },
+      "billing_spending": { "name": "Importe estimado del período" },
+      "billing_consumption": { "name": "Consumo del período" },
+      "unpaid_invoices": { "name": "Facturas impagas" },
+      "last_invoice": { "name": "Última factura" },
+      "device_power": { "name": "Potencia instantánea" },
+      "device_voltage": { "name": "Voltaje" },
+      "device_rssi": { "name": "RSSI" },
+      "device_consumption_share": { "name": "Porcentaje del consumo total" },
+      "renewable_sources": { "name": "% renovable (UTE nacional)" },
+      "quality_global": { "name": "Calidad servicio (país)" },
+      "quality_department": { "name": "Calidad servicio (depto)" },
+      "admin_status": { "name": "Estado del servicio" }
+    },
+    "binary_sensor": {
+      "device_on": { "name": "Consumiendo" },
+      "device_bypass": { "name": "Bypass" },
+      "device_schedule_active": { "name": "Programación activa" }
+    }
+  }
+}
