@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 2000" width="850" height="2000">
+  <!-- Rollup 85 x 200 cm (1 unidad = 1 mm). Textos y datos marcados con [EDITAR] son placeholders. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#04201F"/><stop offset="0.55" stop-color="#0A4A45"/><stop offset="1" stop-color="#04201F"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#B8F34A" stop-opacity="0.55"/><stop offset="1" stop-color="#B8F34A" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="2.5" fill="#B8F34A" opacity="0.10"/>
+    </pattern>
+    <style>
+      .f{font-family:"Poppins","Montserrat","Arial Black","DejaVu Sans",Arial,sans-serif;font-weight:800}
+      .r{font-family:"Poppins","Montserrat","DejaVu Sans",Arial,sans-serif;font-weight:500}
+    </style>
+  </defs>
+
+  <rect width="850" height="2000" fill="url(#bg)"/>
+  <rect width="850" height="2000" fill="url(#dots)"/>
+
+  <!-- Franja superior -->
+  <rect x="0" y="0" width="850" height="14" fill="#B8F34A"/>
+  <text x="425" y="95" text-anchor="middle" class="r" font-size="30" letter-spacing="8" fill="#B8F34A">EXPO FACULTAD DE VETERINARIA</text>
+
+  <!-- Logo -->
+  <text x="425" y="320" text-anchor="middle" class="f" font-size="260" fill="#fff" letter-spacing="-8">Z<tspan fill="#B8F34A">Vet</tspan></text>
+  <rect x="215" y="355" width="420" height="6" rx="3" fill="#FF8A3D"/>
+  <text x="425" y="425" text-anchor="middle" class="r" font-size="48" fill="#fff" letter-spacing="4">by <tspan class="f" fill="#FF8A3D">Caudata</tspan></text>
+
+  <!-- Titular -->
+  <text text-anchor="middle" class="f" fill="#fff">
+    <tspan x="425" y="590" font-size="92">Tu veterinaria,</tspan>
+    <tspan x="425" y="695" font-size="92" fill="#B8F34A">ordenada.</tspan>
+  </text>
+  <text x="425" y="775" text-anchor="middle" class="r" font-size="38" fill="#CFE9E4">Historias clínicas, agenda y pacientes</text>
+  <text x="425" y="822" text-anchor="middle" class="r" font-size="38" fill="#CFE9E4">en un solo lugar.</text>
+
+  <!-- CTA + QR (zona de altura de ojos / escaneo) -->
+  <rect x="75" y="880" width="700" height="290" rx="40" fill="#B8F34A"/>
+  <rect x="115" y="915" width="220" height="220" rx="20" fill="#fff"/>
+  <!-- [EDITAR] reemplazar este bloque por el QR real -->
+  <g fill="#04201F">
+    <rect x="130" y="930" width="64" height="64" rx="6"/><rect x="140" y="940" width="44" height="44" fill="#fff"/><rect x="150" y="950" width="24" height="24"/>
+    <rect x="256" y="930" width="64" height="64" rx="6"/><rect x="266" y="940" width="44" height="44" fill="#fff"/><rect x="276" y="950" width="24" height="24"/>
+    <rect x="130" y="1056" width="64" height="64" rx="6"/><rect x="140" y="1066" width="44" height="44" fill="#fff"/><rect x="150" y="1076" width="24" height="24"/>
+    <rect x="215" y="935" width="20" height="20"/><rect x="215" y="975" width="30" height="20"/><rect x="225" y="1015" width="20" height="30"/>
+    <rect x="265" y="1020" width="20" height="20"/><rect x="295" y="1050" width="25" height="25"/><rect x="215" y="1060" width="30" height="20"/>
+    <rect x="265" y="1085" width="55" height="30"/><rect x="205" y="1100" width="20" height="20"/>
+  </g>
+  <text x="375" y="1000" class="f" font-size="64" fill="#04201F">Escaneá</text>
+  <text x="375" y="1065" class="f" font-size="64" fill="#04201F">y probalo</text>
+  <text x="375" y="1125" class="r" font-size="30" fill="#0A4A45">zvet.uy  <tspan font-size="22">[EDITAR]</tspan></text>
+
+  <!-- Protagonista: salamandra (Caudata) -->
+  <circle cx="425" cy="1420" r="330" fill="url(#glow)"/>
+  <g id="sal" stroke-linecap="round" stroke-linejoin="round">
+    <!-- patas -->
+    <g stroke="#7FCB3C" fill="none" stroke-width="34">
+      <path d="M375 1330 C320 1315 275 1335 250 1380"/><path d="M475 1330 C530 1315 575 1335 600 1380"/>
+      <path d="M380 1450 C325 1460 290 1490 275 1535"/><path d="M470 1450 C525 1460 560 1490 575 1535"/>
+    </g>
+    <g fill="#7FCB3C">
+      <circle cx="250" cy="1385" r="24"/><circle cx="600" cy="1385" r="24"/><circle cx="275" cy="1540" r="24"/><circle cx="575" cy="1540" r="24"/>
+    </g>
+    <!-- cola -->
+    <path d="M370 1450 C370 1540 335 1600 270 1630 C360 1640 470 1590 480 1450 Z" fill="#7FCB3C"/>
+    <!-- cuerpo -->
+    <path d="M425 1290 L425 1450" stroke="#8FDB4A" stroke-width="130"/>
+    <!-- cabeza -->
+    <ellipse cx="425" cy="1270" rx="82" ry="72" fill="#8FDB4A"/>
+    <!-- branquias estilo axolote -->
+    <g stroke="#FF8A3D" stroke-width="9" fill="none">
+      <path d="M350 1250 L305 1235"/><path d="M348 1270 L300 1272"/><path d="M352 1290 L310 1308"/>
+      <path d="M500 1250 L545 1235"/><path d="M502 1270 L550 1272"/><path d="M498 1290 L540 1308"/>
+    </g>
+    <!-- ojos -->
+    <circle cx="390" cy="1240" r="17" fill="#04201F"/><circle cx="460" cy="1240" r="17" fill="#04201F"/>
+    <circle cx="395" cy="1234" r="6" fill="#fff"/><circle cx="465" cy="1234" r="6" fill="#fff"/>
+    <path d="M400 1300 Q425 1318 450 1300" stroke="#04201F" stroke-width="7" fill="none"/>
+    <!-- manchas -->
+    <g fill="#FF8A3D">
+      <circle cx="405" cy="1360" r="14"/><circle cx="450" cy="1385" r="17"/><circle cx="415" cy="1425" r="12"/>
+      <circle cx="440" cy="1470" r="12"/><circle cx="395" cy="1500" r="10"/><circle cx="395" cy="1560" r="8"/>
+      <circle cx="260" cy="1385" r="8"/><circle cx="590" cy="1385" r="8"/>
+    </g>
+  </g>
+
+  <!-- Beneficios -->
+  <g class="f" text-anchor="middle" fill="#fff">
+    <g transform="translate(150 1735)">
+      <circle r="62" fill="#B8F34A"/>
+      <path d="M-22 -30 h32 l14 14 v46 h-46 z M-12 -4 h26 M-12 10 h26 M-12 24 h16" stroke="#04201F" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text y="110" font-size="30">Historia</text><text y="145" font-size="30">clínica</text>
+    </g>
+    <g transform="translate(425 1735)">
+      <circle r="62" fill="#B8F34A"/>
+      <rect x="-32" y="-28" width="64" height="58" rx="8" stroke="#04201F" stroke-width="6" fill="none"/>
+      <path d="M-32 -8 h64 M-16 -38 v16 M16 -38 v16" stroke="#04201F" stroke-width="6" stroke-linecap="round"/>
+      <text y="110" font-size="30">Agenda y</text><text y="145" font-size="30">recordatorios</text>
+    </g>
+    <g transform="translate(700 1735)">
+      <circle r="62" fill="#B8F34A"/>
+      <path d="M-34 14 a24 24 0 0 1 4 -46 a32 32 0 0 1 60 8 a22 22 0 0 1 -2 38 z" stroke="#04201F" stroke-width="6" fill="none" stroke-linejoin="round"/>
+      <text y="110" font-size="30">Datos en la</text><text y="145" font-size="30">nube</text>
+    </g>
+  </g>
+
+  <!-- Pie -->
+  <rect x="0" y="1930" width="850" height="70" fill="#B8F34A"/>
+  <text x="425" y="1977" text-anchor="middle" class="f" font-size="30" fill="#04201F">ZVet by Caudata · Hecho en Uruguay</text>
+</svg>
