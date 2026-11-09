@@ -29,7 +29,12 @@ Por **Shelly UTE** (Calefón, A/C, etc.):
 - `binary_sensor.<nombre>_programacion_activa` (schedule activo)
 - `binary_sensor.<nombre>_bypass` (deshabilitado por defecto)
 
-Compatible con el [Energy Dashboard](https://www.home-assistant.io/docs/energy/) — agregá los sensores `consumo_total` y `consumo_del_periodo` como medidores de red, y `potencia_instantanea` del Shelly como consumo individual.
+Por **suministro con medidor inteligente** (AMI), además, una estadística externa:
+- `ute_uruguay:consumo_horario_<servicePoint>` — consumo **por hora** (kWh, 3 decimales) con su hora real, tomado de la curva del medidor ("Mi consumo" en la app). La primera vez se importa un año hacia atrás; después se actualiza cada 3 horas, reescribiendo las últimas 72 horas por si UTE publicó o corrigió alguna tarde. UTE publica los datos con ~1 día de atraso.
+
+### Energy Dashboard
+
+Para el consumo de red usá la estadística **"UTE consumo por hora"** (Energía → Red eléctrica → Agregar consumo) **en lugar de** `consumo_del_periodo` y `consumo_total`: con más de uno, el consumo se cuenta doble. Con una estadística importada HA no calcula el costo con un precio por kWh (eso sólo funciona con sensores); si usás el costo en Energía, tenelo en cuenta antes de cambiar. Cada hora queda en su hora real, así que no hay picos al cambiar el período de facturación (el sensor `consumo_del_periodo` vuelve a cero en cada ciclo y HA suma de golpe los primeros días del período nuevo). `potencia_instantanea` del Shelly sirve como consumo individual.
 
 ## Instalación
 

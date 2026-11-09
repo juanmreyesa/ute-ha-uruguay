@@ -1,6 +1,7 @@
 {
   "domain": "ute_uruguay",
   "name": "UTE Uruguay",
+  "after_dependencies": ["recorder"],
   "codeowners": ["@juanmreyesa"],
   "config_flow": true,
   "dependencies": [],

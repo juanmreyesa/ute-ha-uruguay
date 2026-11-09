@@ -115,6 +115,11 @@ class UteCoordinator(DataUpdateCoordinator[UteData]):
         await self._client.bootstrap()
         await self._client.login(self._document, self._password)
 
+    @property
+    def client(self):
+        """Cliente UTE logueado (None hasta el login)."""
+        return self._client
+
     async def async_close(self) -> None:
         if self._client:
             await self._client.aclose()
