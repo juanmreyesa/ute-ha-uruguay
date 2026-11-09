@@ -331,6 +331,27 @@ POST /customersapp/accounts/consumption/simulation
 
 Es el endpoint que alimenta el header de la home de la app móvil ("315 kWh - $2.622 desde 16/04"). Útil como sensor primario de Home Assistant.
 
+### Curva de consumo (por hora / por día)
+
+Validado 2026-11-08 contra la API (medidor KAIFA, tarifa TRD):
+
+```
+GET /customersapp/accounts/miConsumptionCurve/{servicePointId}/{granularity}/{fromDate}/{toDate}
+→ [
+  {"date": "2026-11-04T00:00:00-03:00", "period": 1, "value": 0.227,
+   "label": "00:00", "magnitudeVO": "IMPORT_ACTIVE_ENERGY"},
+  ...  // mismo formato con "magnitudeVO": "Q1_REACTIVE_ENERGY"
+]
+```
+
+- `granularity`: `H` (24 puntos por día y magnitud, `period` 1..24 = hora 00..23) o `D` (un punto por día, `label` = día del mes). Otros valores devuelven `200 []`.
+- `fromDate`/`toDate`: `YYYY-MM-DD` (también acepta `DD-MM-YYYY` e ISO con hora), ambos inclusive. Formatos sin separador → `400` con `errors.fromDate/toDate`.
+- `date` es la medianoche local del día con offset; la hora está en `period`/`label`.
+- Magnitudes: `IMPORT_ACTIVE_ENERGY` (kWh, 3 decimales) y `Q1_REACTIVE_ENERGY` (kvarh).
+- Las horas de un día suman exactamente el valor `D` de ese día, y es más preciso que `calculateConsumptionForPlan` (que redondea a kWh enteros por franja: 29 vs 30,575 kWh en 3 días).
+- Atraso: ~1 día. Historial: al menos 1 año. 30 días por hora (~1.500 puntos) en un solo pedido.
+- Con `accountId` en el primer segmento → `401`; con otros órdenes de ids → `404`.
+
 ### Consumo por horario (TOU)
 
 ```

@@ -4,6 +4,8 @@ Lee tu consumo, importe del período, deuda y estado del suministro **directo de
 
 Soporta tarifas Simple, Doble Horario y Triple Horario — los buckets se autodetectan según tu plan tarifario.
 
+Con **medidor inteligente**, además importa tu consumo **por hora** (el de "Mi consumo" en la app, un año hacia atrás) como estadística para el panel de Energía: cada hora queda en su hora real, sin picos al cambiar el período de facturación.
+
 Si tenés un **Shelly UTE** (Calefón, A/C, plan "Descubre tu consumo"), aparece como dispositivo separado con sensores de potencia, voltaje, estado del relé y porcentaje del consumo total.
 
 ## Configuración

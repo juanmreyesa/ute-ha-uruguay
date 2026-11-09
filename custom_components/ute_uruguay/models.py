@@ -157,6 +157,31 @@ class DeviceStatus:
 
 
 @dataclass
+class CurvePoint:
+    """Un punto de la curva de consumo (`miConsumptionCurve`).
+
+    `date` es la medianoche del día con su offset (`2026-11-04T00:00:00-03:00`) y `period`
+    va de 1 a 24 con granularidad `H` (1 = 00:00-01:00); con `D`, `period` es siempre 1.
+    """
+
+    date: str
+    period: int
+    value: float | None  # None: hora todavía sin medir
+    label: str
+    magnitude: str  # IMPORT_ACTIVE_ENERGY (kWh) | Q1_REACTIVE_ENERGY (kvarh)
+
+    @classmethod
+    def from_json(cls, data: dict[str, Any]) -> "CurvePoint":
+        return cls(
+            date=data["date"],
+            period=int(data.get("period") or 1),
+            value=None if data.get("value") is None else float(data["value"]),
+            label=str(data.get("label") or ""),
+            magnitude=str(data.get("magnitudeVO") or ""),
+        )
+
+
+@dataclass
 class ConsumptionTOU:
     """Consumo agrupado por horario (Time-Of-Use): PUNTA / LLANO / VALLE."""
 
